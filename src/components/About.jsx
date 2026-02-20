@@ -1,3 +1,5 @@
+import imagemPoro from "../img/poro.jpg";
+
 function About() {
   return (
     <section className="relative overflow-hidden flex justify-center pb-[80px] items-center gap-[150px] mb-[100px] p-[50px]">
@@ -37,7 +39,7 @@ function About() {
       <div className="z-10 w-[40%] h-[75vh]">
         <img
           className="w-full h-[110%] object-cover object-[-190px] rounded-t-[100px] shadow-2xl border-2 border-[#a38043]"
-          src="src/img/poro.jpg"
+          src={imagemPoro}
           alt=""
         />
       </div>
