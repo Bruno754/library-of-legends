@@ -37,7 +37,7 @@ function About() {
       <div className="z-10 w-[40%] h-[75vh]">
         <img
           className="w-full h-[110%] object-cover object-[-190px] rounded-t-[100px] shadow-2xl border-2 border-[#a38043]"
-          src="src\img\poro.jpg"
+          src="src/img/poro.jpg"
           alt=""
         />
       </div>
