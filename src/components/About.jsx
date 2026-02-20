@@ -1,8 +1,10 @@
 import imagemPoro from "../img/poro.jpg";
+import imagemPorinhos from "../img/porinhos.jpg";
+import imagemPoroMago from "../img/poromago.jpg";
 
 function About() {
   return (
-    <section className="relative overflow-hidden flex justify-center pb-[80px] items-center gap-[150px] mb-[100px] p-[50px]">
+    <section className="relative overflow-hidden flex justify-center pb-[80px] items-center gap-[200px] mb-[100px] p-[50px]">
       <div
         className="z-20 w-[40%] h-[75vh] bg-black/50 backdrop-blur-md 
                         rounded-2xl p-12 shadow-2xl 
@@ -36,11 +38,24 @@ function About() {
           </span>
         </p>
       </div>
-      <div className="z-10 w-[40%] h-[75vh]">
+      <div className="relative z-10 w-[40%] h-[75vh]">
+        {/* Esta imagem fica atrás (base) */}
         <img
-          className="w-full h-[110%] object-cover object-[-190px] rounded-t-[100px] shadow-2xl border-2 border-[#a38043]"
+          className="absolute top-0 -left-[100px] w-[90%] h-[110%] object-cover object-[-240px] rounded-t-[100px] -rotate-[15deg] shadow-2xl border-2 z-20 border-[#a38043]"
           src={imagemPoro}
-          alt=""
+          alt="Poro de fundo"
+        />
+
+        {/* Esta imagem fica na frente e rotacionada */}
+        <img
+          className="absolute top-20 left-[110px] w-[90%] h-[110%] object-cover object-[-190px] rounded-t-[100px] rotate-[15deg] shadow-2xl border-2 border-[#a38043] "
+          src={imagemPorinhos}
+          alt="Poro da frente"
+        />
+        <img
+          className="absolute top-10 left-10 w-[90%] h-[110%] object-cover object-[-190px] rounded-t-[100px] shadow-2xl border-2 border-[#a38043] "
+          src={imagemPoroMago}
+          alt="Poro da frente"
         />
       </div>
       <div
