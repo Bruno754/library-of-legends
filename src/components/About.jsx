@@ -4,11 +4,9 @@ import imagemPoroMago from "../img/poromago.jpg";
 
 function About() {
   return (
-    <section className="relative overflow-hidden flex justify-center pb-[80px] items-center gap-[200px] mb-[100px] p-[50px]">
+    <section className="relative overflow-hidden flex justify-center pb-[80px] items-center gap-[250px] mb-[100px] px-[0px] py-[50px]">
       <div
-        className="z-20 w-[40%] h-[75vh] bg-black/50 backdrop-blur-md 
-                        rounded-2xl p-12 shadow-2xl 
-                        border border-[#a38043] 
+        className="overflow-y-scroll 2xl:overflow-visible z-20 w-[100%] xl:w-[35%] h-[75vh] bg-black/50 backdrop-blur-md p-12 shadow-2xl 
                         flex flex-col justify-start"
       >
         <h1 className="font-ptsans text-4xl font-bold italic mb-6 text-[#ebbb69]">
@@ -33,27 +31,27 @@ function About() {
             Considere eles easter eggs não intencionais.
           </span>{" "}
           <span>
-            Seja bem vindo. Escolha seu campeão. E lembre-se: a culpa nunca é do
-            jungle. Ou quase nunca.
+            Seja bem vindo. Escolha seu campeão. E lembre-se:{" "}
+            <span>a culpa nunca é do jungle. Ou quase nunca.</span>
           </span>
         </p>
       </div>
-      <div className="relative z-10 w-[40%] h-[75vh]">
+      <div className="relative z-10 w-[40%] h-[75vh] hidden xl:block ">
         {/* Esta imagem fica atrás (base) */}
         <img
-          className="absolute top-0 -left-[100px] w-[90%] h-[110%] object-cover object-[-240px] rounded-t-[100px] -rotate-[15deg] shadow-2xl border-2 z-20 border-[#a38043]"
+          className="absolute top-0 -left-[100px] w-[90%] h-[110%] object-cover object-[-240px] rounded-t-[35px] -rotate-[15deg] shadow-2xl border-2 z-20 border-[#a38043]"
           src={imagemPoro}
           alt="Poro de fundo"
         />
 
         {/* Esta imagem fica na frente e rotacionada */}
         <img
-          className="absolute top-20 left-[110px] w-[90%] h-[110%] object-cover object-[-190px] rounded-t-[100px] rotate-[15deg] shadow-2xl border-2 border-[#a38043] "
+          className="absolute top-20 left-[110px] w-[90%] h-[110%] object-cover object-[-190px] rounded-t-[35px] rotate-[15deg] shadow-2xl border-2 border-[#a38043] "
           src={imagemPorinhos}
           alt="Poro da frente"
         />
         <img
-          className="absolute top-10 left-10 w-[90%] h-[110%] object-cover object-[-190px] rounded-t-[100px] shadow-2xl border-2 border-[#a38043] "
+          className="absolute top-10 left-10 w-[90%] h-[110%] object-cover object-[-190px] rounded-t-[35px] shadow-2xl border-2 border-[#a38043] "
           src={imagemPoroMago}
           alt="Poro da frente"
         />

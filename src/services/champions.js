@@ -1,5 +1,5 @@
 const URL =
-  "https://ddragon.leagueoflegends.com/cdn/13.24.1/data/pt_BR/champion.json";
+  "https://ddragon.leagueoflegends.com/cdn/16.4.1/data/pt_BR/champion.json";
 
 export async function getChampions() {
   const resp = await fetch(URL);

@@ -1,1 +1,20 @@
+/* largura da barra */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
+/* fundo da trilha */
+::-webkit-scrollbar-track {
+  background: #0e2333;
+}
+
+/* parte que você arrasta */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #209ba9, #0e2333);
+  border-radius: 9999px;
+}
+
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #2fc5d6, #0e2333);
+}

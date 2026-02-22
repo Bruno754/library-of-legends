@@ -22,7 +22,7 @@ function App() {
   }, []);
 
   return (
-    <div className="max-w-screen min-h-screen bg-cover bg-[url('./img/Design_sem_nome_25.png')]">
+    <div className="max-w-screen min-h-screen bg-cover bg-center bg-fixed bg-[url('./img/Design_sem_nome_25.png')]">
       <Header />
       <main className="flex-1 flex flex-col justify-center items-center">
         <About />
