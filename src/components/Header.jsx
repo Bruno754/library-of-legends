@@ -15,7 +15,7 @@ function Header() {
   return (
     <header className="relative shadow-xs flex flex-col max-w-screen justify-between items-center border-b-2 border-[#a38043] bg-zinc-900">
       <div>
-        <div className="flex flex-row w-screen justify-between items-center px-10 py-4">
+        <div className="flex flex-row w-full justify-between items-center px-10 py-4">
           <h1 className="font-ptsans text-4xl font-bold italic text-[#ebbb69]">
             LIBRARY OF LEGENDS
           </h1>
