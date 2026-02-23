@@ -1,8 +1,12 @@
+import { useState } from "react";
 import ChampionCard from "./ChampionCard";
+import ChampionDetails from "./ChampionDetails";
 
 function CardsSection({ champions }) {
+  const [selectedCard, setSelectedCard] = useState(null);
+
   return (
-    <div className="w-full p-10">
+    <div id="cards" className="w-full p-10">
       <div className="gap-[35px] gap-y-[50px] flex flex-row flex-wrap justify-center">
         {champions.map((champ) => {
           return (
@@ -17,10 +21,19 @@ function CardsSection({ champions }) {
               magic={champ.info.magic}
               lore={champ.blurb}
               tags={champ.tags}
+              onSelect={setSelectedCard}
             />
           );
         })}
       </div>
+      {selectedCard && (
+        <ChampionDetails
+          onClose={() => {
+            setSelectedCard(null);
+          }}
+          data={selectedCard}
+        />
+      )}
     </div>
   );
 }

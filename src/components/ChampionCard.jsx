@@ -1,3 +1,4 @@
+import { data } from "autoprefixer";
 import { Swords, Shield, Sparkles, Star } from "lucide-react";
 
 function ChampionCard({
@@ -10,9 +11,23 @@ function ChampionCard({
   id,
   lore,
   tags,
+  onSelect,
 }) {
   const imageURL = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_0.jpg`;
   const iconURL = `https://ddragon.leagueoflegends.com/cdn/16.4.1/img/champion/${id}.png`;
+
+  const data = {
+    name: champName,
+    image: imageURL,
+    title: champTitle,
+    difficulty: difficulty,
+    attack: attack,
+    defense: defense,
+    magic: magic,
+    id: id,
+    lore: lore,
+    tags: tags,
+  };
 
   return (
     <div className="group h-[620px] w-[380px] [perspective:1000px]">
@@ -64,9 +79,16 @@ function ChampionCard({
                 <p className="line-clamp-2 block">{magic}</p>
               </span>
             </div>
-            <p>{lore}</p>
+            <p className="line-clamp-3 overflow-hidden text-ellipsis">{lore}</p>
 
-            <button className="mt-4 bg-blue-600 px-6 py-2 font-bold hover:bg-blue-700 transition-colors">
+            <button
+              // eslint-disable-next-line no-undef
+              onClick={() => {
+                onSelect(data);
+                console.log(data);
+              }}
+              className="mt-4 bg-blue-600 px-6 py-2 font-bold hover:bg-blue-700 transition-colors"
+            >
               Ver Detalhes
             </button>
           </div>

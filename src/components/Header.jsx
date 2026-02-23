@@ -1,6 +1,6 @@
 import { UserRound, Menu } from "lucide-react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Header() {
   const [displayMenu, setDisplayMenu] = useState(false);
@@ -22,14 +22,7 @@ function Header() {
           <nav>
             <ul className="font-inter font-bold hidden xl:flex justify-center items-center gap-7 text-xl text-white">
               <li>
-                <input
-                  className="w-100 bg-zinc-700 rounded-2xl border-gray-300 placeholder-zinc-400 text-1xl font-normal italic px-7 py-3 mr-5"
-                  placeholder="Procure seu campeão"
-                  type="text"
-                />
-              </li>
-              <li>
-                <button onClick={() => navigate("/champions")}>CAMPEÕES</button>
+                <a href="#cards">CAMPEÕES</a>
               </li>
               <li>
                 <button>ITENS</button>
