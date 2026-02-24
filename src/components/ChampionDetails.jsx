@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
-import { ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  Swords,
+  Sparkles,
+  LineChart,
+  Star,
+  Shield,
+} from "lucide-react";
 
 function ChampionDetails({ data, onClose }) {
   const [detailedData, setDetailedData] = useState(null);
@@ -53,9 +60,46 @@ function ChampionDetails({ data, onClose }) {
           <h1 className="absolute top-0 right-[5%] text-white text-6xl font-bold italic uppercase">
             {data.name || "Champion"}
           </h1>
-          <p className="text-lg italic text-right w-[100%] p-10 absolute top-[10%] right-[0%] text-white">
+          <p className="overflow-y-scroll 2xl:overflow-visible text-lg italic text-right w-[100%] h-[40%] p-10 absolute top-[10%] right-[0%] text-white">
             {detailedData ? detailedData.lore : "Carregando biografia..."}
           </p>
+          <div className="absolute bottom-[30%] right-[5%] text-white flex flex-col lg:flex-row gap-3 lg:gap-10">
+            <span className="flex flex-row gap-2">
+              <Star className="text-yellow-400" />
+              <p>DIFICULDADE</p>
+              <p>{data.difficulty}</p>
+            </span>
+            <span className="flex flex-row gap-2">
+              <Swords className="text-blue-400" />
+              <p>ATAQUE</p>
+              <p>{data.attack}</p>
+            </span>
+            <span className="flex flex-row gap-2">
+              <Shield className="text-green-400" />
+              <p>DEFESA</p>
+              <p>{data.defense}</p>
+            </span>
+            <span className="flex flex-row gap-2">
+              <Sparkles className="text-purple-400" />
+              <p>MAGIA</p>
+              <p className="line-clamp-2 block">{data.magic}</p>
+            </span>
+          </div>
+
+          <div className="absolute bottom-[15%] right-[5%] flex gap-7">
+            <button className="text-white border-2 p-3 flex gap-3 rounded-xl">
+              <Swords />
+              <span>HABILIDADES</span>
+            </button>
+            <button className="text-white border-2 p-3 flex gap-3 rounded-xl">
+              <LineChart />
+              <span>ESTATISTICAS</span>
+            </button>
+            <button className="text-white border-2 p-3 flex gap-3 rounded-xl">
+              <Sparkles />
+              <span>SKINS</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
