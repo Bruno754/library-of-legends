@@ -1,4 +1,4 @@
-import { data } from "autoprefixer";
+/* eslint-disable react/prop-types */
 import { Swords, Shield, Sparkles, Star } from "lucide-react";
 
 function ChampionCard({

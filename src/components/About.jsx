@@ -4,7 +4,7 @@ import imagemPoroMago from "../img/poromago.jpg";
 
 function About() {
   return (
-    <section className="relative overflow-hidden flex justify-center pb-[80px] items-center gap-[250px] mb-[100px] px-[0px] py-[50px]">
+    <section className="relative overflow-hidden flex justify-center pb-[80px] items-center gap-[250px] px-[0px] py-[50px]">
       <div
         className="overflow-y-scroll 2xl:overflow-visible z-20 w-[100%] xl:w-[35%] h-[75vh] bg-black/50 backdrop-blur-md p-12 shadow-2xl 
                         flex flex-col justify-start"
